@@ -18,6 +18,7 @@ JOIN
         visits.source_id = water_source.source_id
 ---filtering location_id AkHa00103 to check for visit_count > 1
 WHERE visits.location_id = 'AkHa00103';
+
 --- query to return single visits for every visit_count.
 SELECT
         location.location_id,
@@ -37,6 +38,7 @@ JOIN
     ON 
         visits.source_id = water_source.source_id
 WHERE visits.visit_count = 1;
+
 /* now since we've verified that our tables are joined correctly, we can now remove the
 location_id and visit count column */
 SELECT
@@ -55,6 +57,7 @@ JOIN
     ON 
         visits.source_id = water_source.source_id
 WHERE visits.visit_count = 1;
+
 --adding the location type column and time in queue to our existing table.
 SELECT
         location_type,
@@ -74,6 +77,7 @@ JOIN
     ON 
         visits.source_id = water_source.source_id
 WHERE visits.visit_count = 1;
+
 ---adding the result column on our water pollution table and join water  pollution to our previous
 ---query using left join and inner join
 SELECT
@@ -99,6 +103,7 @@ INNER JOIN
         water_source.source_id = visits.source_id
 WHERE
 visits.visit_count = 1;
+
 --This view assembles data from different tables into one to simplify analysis by creating view
 CREATE VIEW combined_analysis_table AS
 SELECT
@@ -235,11 +240,13 @@ ct.province_name,
 ct.town_name
 ORDER BY
 ct.town_name;
+
 ---Test running the temporary table created by retrieving all the data in it using the wildcard
 SELECT 
         *
 FROM
 total_aggregate_water_access;
+
 ---checking for the which town has the highest ratio of people who have taps, 
 ---but have no running water
 SELECT
@@ -350,6 +357,7 @@ WHERE
         OR (water_source.type_of_water_source = 'shared_tap' AND time_in_queue >= 30)
         OR (water_source.type_of_water_source = 'well' 
         AND well_pollution.results IS NOT NULL AND well_pollution.results !='Clean'));
+
 ----QUERY to Add a case statement to our query updating broken taps to Diagnose local infrastructure. 
 SELECT
     location.address,
@@ -383,6 +391,7 @@ WHERE
         OR (water_source.type_of_water_source = 'shared_tap' AND time_in_queue >= 30)
         OR (water_source.type_of_water_source = 'well' 
         AND well_pollution.results IS NOT NULL AND well_pollution.results !='Clean'));
+
 ----QUERY to update the Improvement column for shared_taps with long queue times
 SELECT
     location.address,
@@ -459,6 +468,7 @@ WHERE
         IS NOT NULL AND well_pollution.results != 'Clean')
         OR water_source.type_of_water_source IN ('river', 'tap_in_home_broken')
     );
+
 ---Final query
 SELECT
     location.address,
@@ -496,8 +506,6 @@ WHERE
         OR (water_source.type_of_water_source = 'well' AND well_pollution.results 
         IS NOT NULL AND well_pollution.results != 'Clean')
         OR water_source.type_of_water_source IN ('river', 'tap_in_home_broken'));
-
-
 
 SELECT
 project_progress.Project_id, 
