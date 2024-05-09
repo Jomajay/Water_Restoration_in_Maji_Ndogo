@@ -1,7 +1,13 @@
-# Project: Database Analysis and Insights
+# Project: Water Quality Management and Infrastructure Improvement System
+---
+## Project Description:
+Develop a comprehensive system for managing water quality and improving infrastructure in communities. Utilizing SQL scripts and data analysis techniques, the system will integrate data from various sources to assess water sources, pollution levels, and community needs. The system will offer functionalities for filtering, analyzing, and visualizing data to identify areas requiring intervention. Key features include population analysis, prioritization of improvement projects, project progress tracking, and performance ranking. This project aims to empower decision-makers with actionable insights to enhance water quality and accessibility, ultimately contributing to sustainable development goals.
+
+---
 
 ## Overview
 This project involves querying and analyzing data from two databases: `md_water_services` and `united_nations`. The goal is to derive insights and make informed decisions based on the extracted information. The queries encompass various aspects, including employee data, water sources, service access, and regional statistics.
+It aims to develop a comprehensive system for managing water quality and improving infrastructure in communities. Leveraging SQL scripts and data analysis techniques, the system integrates data from various sources to assess water sources, pollution levels, and community needs. By offering functionalities for filtering, analyzing, and visualizing data, decision-makers can identify areas requiring intervention, prioritize improvement projects, track project progress, and assess performance. Ultimately, this system aims to empower stakeholders with actionable insights to enhance water quality and accessibility, contributing to sustainable development goals.
 This SQL script is a comprehensive set of queries and operations performed on databases related to water services and access to basic services. It includes operations such as data manipulation, analysis, and database management. Below is a summary of the key sections of the script:
 
 ## Technologies Used
