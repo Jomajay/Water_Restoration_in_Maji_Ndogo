@@ -50,9 +50,61 @@ This SQL script is a comprehensive set of queries and operations performed on da
 - **Regional Classification**: Classifies African countries into regional economic communities and performs analysis based on this classification.
 - **Subquery Operations**: Utilizes subqueries for data filtering and analysis, both with JOIN and FROM keywords.
 
----
+### Script README for the third script of this project.
 
-This README provides an overview of the SQL script's functionalities and highlights its key features, enabling users to understand and navigate the script effectively.
+This SQL script is designed to analyze data related to water quality audits conducted by auditors and employees. Below is an overview of the script's functionality:
+
+- **Database Selection and Data Retrieval:**
+  
+  The script starts by selecting the database `md_water_services` and retrieving data from the `auditor_report` table.
+
+- **Analysis of Scores and Patterns:**
+  
+  Initial queries focus on comparing scores and identifying patterns in water quality scores.
+
+- **Joining Tables and Renaming Columns:**
+  
+  Tables such as `auditor_report`, `visits`, and `water_quality` are joined, and columns are renamed for clarity.
+
+- **Filtering and Data Comparison:**
+  
+  Data is filtered based on certain conditions, and comparisons are made between auditor and employee scores.
+
+- **Identification of Mistakes:**
+  
+  Queries are executed to identify records where auditor and employee scores differ, indicating potential mistakes.
+
+- **Analysis of Employee Performance:**
+  
+  The script calculates the number of mistakes made by each employee and identifies employees with above-average mistakes.
+
+- **Creation of Views:**
+  
+  Views are created to store and retrieve specific datasets for further analysis.
+
+- **Additional Analysis:**
+  
+  Further queries are included to filter data based on specific criteria and identify potential issues such as cash-related statements.
+
+- **Multiple-Choice Questions:**
+  
+  Queries are provided for generating multiple-choice questions based on the analyzed data.
+
+- **Suspect List Generation:**
+  
+  A list of suspect employees, who have made more mistakes than the average, is generated.
+
+- **Final Data Retrieval:**
+  
+  The script concludes by retrieving the relevant data, including records with significant score differences and suspicious employee activities.
+
+- **Cleanup:**
+  
+  Views created during the script execution are dropped to maintain database cleanliness.
+
+
+This README provides an overview of the SQL script's functionalities and highlights its key features, enabling users to understand and navigate the script effectively and the sql scripts consists of comprehensive data analysis capabilities for evaluating water quality audits and employee performance within the specified database environment.
+
 
 ## Conclusion
 The queries provide valuable insights into employee distribution, water source management, and regional service access. These insights can aid in decision-making processes related to resource allocation, service improvements, and strategic planning.
