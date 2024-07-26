@@ -1,5 +1,9 @@
 # Project: Water Quality Management and Infrastructure Improvement System
 ---
+
+<img src="https://drive.google.com/uc?export=view&id=1GFZeX5XnCakK1pkkUwyA8hw3EOLIMOxX" alt="Project Overview" style="max-width:100%; height:auto;">
+
+
 ## Project Description:
 Develop a comprehensive system for managing water quality and improving infrastructure in communities. Utilizing SQL scripts and data analysis techniques, the system will integrate data from various sources to assess water sources, pollution levels, and community needs. The system will offer functionalities for filtering, analyzing, and visualizing data to identify areas requiring intervention. Key features include population analysis, prioritization of improvement projects, project progress tracking, and performance ranking. This project aims to empower decision-makers with actionable insights to enhance water quality and accessibility, ultimately contributing to sustainable development goals.
 
