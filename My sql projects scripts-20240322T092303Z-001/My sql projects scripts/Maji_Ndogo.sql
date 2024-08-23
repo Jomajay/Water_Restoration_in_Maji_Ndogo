@@ -5,14 +5,15 @@ SELECT
     LOWER(REPLACE(employee_name, ' ','.')), '@ndogowater.gov') AS new_email
 FROM employee;
 
-# setting and updating the existing table with the email column.
+# Setting and updating the existing table with the email column.
 SET SQL_SAFE_UPDATES = 0;
 
 UPDATE
 	employee
 SET 
 email = CONCAT(
-    LOWER(REPLACE(employee_name, ' ','.')), '@ndogowater.gov');
+    LOWER(REPLACE(employee_name, ' ','.')), '@ndogowater.gov')
+WHERE assigned_employee_id BETWEEN 0 AND 110;
 
 # Checking for the length of the phone_column and trimming out the unnecessary space then updating the whole table 
 SELECT
